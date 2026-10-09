@@ -1,0 +1,3 @@
+# Additional reconstruction dependencies; original versions are not frozen in the training protocol.
+openpyxl
+python-docx

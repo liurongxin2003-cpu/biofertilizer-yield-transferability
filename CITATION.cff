@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "Cite the authors and actual approved code-only version/commit when published. This local candidate has no new DOI."
+title: "Biofertilizer yield transferability: research analysis and visualization source"
+type: software
+authors:
+  - family-names: Liu
+    given-names: Rongxin
+  - family-names: Niu
+    given-names: Yusheng
+repository-code: "https://github.com/liurongxin2003-cpu/biofertilizer-yield-transferability"
+license: MIT
+abstract: "Local code-only candidate preserving original scientific method implementations. Authentic datasets, prediction/bootstrap archives and figure outputs are withheld. Separate licence scope applies to explanatory documentation and third-party notices."

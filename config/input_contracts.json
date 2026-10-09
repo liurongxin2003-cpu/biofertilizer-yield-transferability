@@ -1,0 +1,483 @@
+{
+  "scope": "Input format/presence metadata only; NO scientific data values",
+  "scripts": [
+    {
+      "script": "pipeline/Schutz_2018_phase_minus2/scripts/audit.py",
+      "stage": "phase_minus2",
+      "required_paths_relative_to_pipeline": [
+        "Schutz_2018_phase_minus2/evidence/explore.json",
+        "Schutz_2018_phase_minus2/evidence/s1_probe.json",
+        "Schutz_2018_phase_minus2/evidence/Supplementary_Data_Sheet_S2.xlsx"
+      ],
+      "list_scope": "key prerequisites; dynamic filenames/guarded historical assets are additionally documented and not exhaustively enumerated",
+      "cannot_run_with_public_files_only": true,
+      "reason": "Authentic source/frozen inputs are withheld; no private-literal sidecar is required"
+    },
+    {
+      "script": "pipeline/Schutz_2018_phase_minus2/scripts/validate.py",
+      "stage": "phase_minus2",
+      "required_paths_relative_to_pipeline": [
+        "Schutz_2018_phase_minus2/evidence/explore.json",
+        "Schutz_2018_phase_minus2/evidence/s1_probe.json",
+        "Schutz_2018_phase_minus2/evidence/Supplementary_Data_Sheet_S2.xlsx",
+        "Schutz_2018_phase_minus2/evidence/delivery_tables.json"
+      ],
+      "list_scope": "key prerequisites; dynamic filenames/guarded historical assets are additionally documented and not exhaustively enumerated",
+      "cannot_run_with_public_files_only": true,
+      "reason": "Authentic source/frozen inputs are withheld; no private-literal sidecar is required"
+    },
+    {
+      "script": "pipeline/Schutz_2018_phase_minus1/scripts/audit.py",
+      "stage": "phase_minus1",
+      "required_paths_relative_to_pipeline": [
+        "Schutz_2018_phase_minus2/evidence/Supplementary_Data_Sheet_S2.xlsx",
+        "Schutz_2018_phase_minus2/phase_minus2_pairing_audit.tsv"
+      ],
+      "list_scope": "key prerequisites; dynamic filenames/guarded historical assets are additionally documented and not exhaustively enumerated",
+      "cannot_run_with_public_files_only": true,
+      "reason": "Authentic source/frozen inputs are withheld; no private-literal sidecar is required"
+    },
+    {
+      "script": "pipeline/Schutz_2018_phase_minus1/scripts/validate.py",
+      "stage": "phase_minus1",
+      "required_paths_relative_to_pipeline": [
+        "Schutz_2018_phase_minus2/evidence/Supplementary_Data_Sheet_S2.xlsx",
+        "Schutz_2018_phase_minus2/phase_minus2_pairing_audit.tsv",
+        "Schutz_2018_phase_minus1/evidence/delivery_tables.json"
+      ],
+      "list_scope": "key prerequisites; dynamic filenames/guarded historical assets are additionally documented and not exhaustively enumerated",
+      "cannot_run_with_public_files_only": true,
+      "reason": "Authentic source/frozen inputs are withheld; no private-literal sidecar is required"
+    },
+    {
+      "script": "pipeline/Schutz_2018_phase0/scripts/prepare.py",
+      "stage": "phase0",
+      "required_paths_relative_to_pipeline": [
+        "Schutz_2018_phase_minus2/evidence/Supplementary_Data_Sheet_S2.xlsx",
+        "Schutz_2018_phase_minus1/phase_minus1_cohort_manifest.tsv",
+        "Schutz_2018_phase_minus1/evidence/frozen_fold_keys.json"
+      ],
+      "list_scope": "key prerequisites; dynamic filenames/guarded historical assets are additionally documented and not exhaustively enumerated",
+      "cannot_run_with_public_files_only": true,
+      "reason": "Authentic source/frozen inputs are withheld; no private-literal sidecar is required"
+    },
+    {
+      "script": "pipeline/Schutz_2018_phase0/scripts/validate.py",
+      "stage": "phase0",
+      "required_paths_relative_to_pipeline": [
+        "Schutz_2018_phase_minus2/evidence/Supplementary_Data_Sheet_S2.xlsx",
+        "Schutz_2018_phase_minus1/phase_minus1_cohort_manifest.tsv",
+        "Schutz_2018_phase_minus1/evidence/frozen_fold_keys.json",
+        "Schutz_2018_phase0/evidence/delivery_tables.json"
+      ],
+      "list_scope": "key prerequisites; dynamic filenames/guarded historical assets are additionally documented and not exhaustively enumerated",
+      "cannot_run_with_public_files_only": true,
+      "reason": "Authentic source/frozen inputs are withheld; no private-literal sidecar is required"
+    },
+    {
+      "script": "pipeline/Schutz_2018_phase1/scripts/freeze_protocol.py",
+      "stage": "phase1",
+      "required_paths_relative_to_pipeline": [
+        "Schutz_2018_phase0/analysis_matrix.tsv",
+        "Schutz_2018_phase0/split_manifest.tsv",
+        "Schutz_2018_phase0/data_dictionary.tsv",
+        "Schutz_2018_phase1/evidence/protocol.json"
+      ],
+      "list_scope": "key prerequisites; dynamic filenames/guarded historical assets are additionally documented and not exhaustively enumerated",
+      "cannot_run_with_public_files_only": true,
+      "reason": "Authentic source/frozen inputs are withheld; no private-literal sidecar is required"
+    },
+    {
+      "script": "pipeline/Schutz_2018_phase1/scripts/run_models.py",
+      "stage": "phase1",
+      "required_paths_relative_to_pipeline": [
+        "Schutz_2018_phase0/analysis_matrix.tsv",
+        "Schutz_2018_phase0/split_manifest.tsv",
+        "Schutz_2018_phase0/data_dictionary.tsv",
+        "Schutz_2018_phase1/evidence/protocol.json"
+      ],
+      "list_scope": "key prerequisites; dynamic filenames/guarded historical assets are additionally documented and not exhaustively enumerated",
+      "cannot_run_with_public_files_only": true,
+      "reason": "Authentic source/frozen inputs are withheld; no private-literal sidecar is required; exact recorded training dependencies also required"
+    },
+    {
+      "script": "pipeline/Schutz_2018_phase1/scripts/evaluate.py",
+      "stage": "phase1",
+      "required_paths_relative_to_pipeline": [
+        "Schutz_2018_phase0/analysis_matrix.tsv",
+        "Schutz_2018_phase0/split_manifest.tsv",
+        "Schutz_2018_phase0/data_dictionary.tsv",
+        "Schutz_2018_phase1/evidence/protocol.json",
+        "Schutz_2018_phase1/run"
+      ],
+      "list_scope": "key prerequisites; dynamic filenames/guarded historical assets are additionally documented and not exhaustively enumerated",
+      "cannot_run_with_public_files_only": true,
+      "reason": "Authentic source/frozen inputs are withheld; no private-literal sidecar is required"
+    },
+    {
+      "script": "pipeline/Schutz_2018_phase1/scripts/validate_outputs.py",
+      "stage": "phase1",
+      "required_paths_relative_to_pipeline": [
+        "Schutz_2018_phase0/analysis_matrix.tsv",
+        "Schutz_2018_phase0/split_manifest.tsv",
+        "Schutz_2018_phase0/data_dictionary.tsv",
+        "Schutz_2018_phase1/evidence/protocol.json",
+        "Schutz_2018_phase1/evidence/delivery_tables.json",
+        "Schutz_2018_phase1/run"
+      ],
+      "list_scope": "key prerequisites; dynamic filenames/guarded historical assets are additionally documented and not exhaustively enumerated",
+      "cannot_run_with_public_files_only": true,
+      "reason": "Authentic source/frozen inputs are withheld; no private-literal sidecar is required"
+    },
+    {
+      "script": "pipeline/Schutz_2018_phase2/scripts/prepare.py",
+      "stage": "phase2",
+      "required_paths_relative_to_pipeline": [
+        "Schutz_2018_phase2/evidence/protocol.json",
+        "Schutz_2018_phase2/evidence/frozen_variants.json",
+        "Schutz_2018_phase1/phase1_predictions.tsv",
+        "Schutz_2018_phase1/evidence/output_QC.json",
+        "Schutz_2018_phase1/PHASE1_STATE.md"
+      ],
+      "list_scope": "key prerequisites; dynamic filenames/guarded historical assets are additionally documented and not exhaustively enumerated",
+      "cannot_run_with_public_files_only": true,
+      "reason": "Authentic source/frozen inputs are withheld; no private-literal sidecar is required"
+    },
+    {
+      "script": "pipeline/Schutz_2018_phase2/scripts/run_models.py",
+      "stage": "phase2",
+      "required_paths_relative_to_pipeline": [
+        "Schutz_2018_phase2/evidence/protocol.json",
+        "Schutz_2018_phase2/evidence/frozen_variants.json",
+        "Schutz_2018_phase1/phase1_predictions.tsv",
+        "Schutz_2018_phase1/evidence/output_QC.json",
+        "Schutz_2018_phase1/PHASE1_STATE.md"
+      ],
+      "list_scope": "key prerequisites; dynamic filenames/guarded historical assets are additionally documented and not exhaustively enumerated",
+      "cannot_run_with_public_files_only": true,
+      "reason": "Authentic source/frozen inputs are withheld; no private-literal sidecar is required; exact recorded training dependencies also required"
+    },
+    {
+      "script": "pipeline/Schutz_2018_phase2/scripts/evaluate.py",
+      "stage": "phase2",
+      "required_paths_relative_to_pipeline": [
+        "Schutz_2018_phase2/evidence/protocol.json",
+        "Schutz_2018_phase2/evidence/frozen_variants.json",
+        "Schutz_2018_phase1/phase1_predictions.tsv",
+        "Schutz_2018_phase1/evidence/output_QC.json",
+        "Schutz_2018_phase1/PHASE1_STATE.md",
+        "Schutz_2018_phase2/run"
+      ],
+      "list_scope": "key prerequisites; dynamic filenames/guarded historical assets are additionally documented and not exhaustively enumerated",
+      "cannot_run_with_public_files_only": true,
+      "reason": "Authentic source/frozen inputs are withheld; no private-literal sidecar is required"
+    },
+    {
+      "script": "pipeline/Schutz_2018_phase2/scripts/validate_outputs.py",
+      "stage": "phase2",
+      "required_paths_relative_to_pipeline": [
+        "Schutz_2018_phase2/evidence/protocol.json",
+        "Schutz_2018_phase2/evidence/frozen_variants.json",
+        "Schutz_2018_phase1/phase1_predictions.tsv",
+        "Schutz_2018_phase1/evidence/output_QC.json",
+        "Schutz_2018_phase1/PHASE1_STATE.md",
+        "Schutz_2018_phase2/evidence/delivery_tables.json",
+        "Schutz_2018_phase2/run"
+      ],
+      "list_scope": "key prerequisites; dynamic filenames/guarded historical assets are additionally documented and not exhaustively enumerated",
+      "cannot_run_with_public_files_only": true,
+      "reason": "Authentic source/frozen inputs are withheld; no private-literal sidecar is required"
+    },
+    {
+      "script": "pipeline/Schutz_2018_external_Sato_Vermeersch/scripts/audit.py",
+      "stage": "external_audit",
+      "required_paths_relative_to_pipeline": [
+        "Schutz_2018_phase0/analysis_matrix.tsv",
+        "Schutz_2018_phase_minus1/phase_minus1_study_audit.tsv",
+        "Schutz_2018_external_Sato_Vermeersch/evidence/Vermeersch_supp_1.docx",
+        "Schutz_2018_external_Sato_Vermeersch/evidence/Koeppen-Geiger-ASCII.zip",
+        "Schutz_2018_external_Sato_Vermeersch/evidence/Sato/TableS2.xlsx",
+        "Schutz_2018_external_Sato_Vermeersch/evidence/external_source_metadata.json"
+      ],
+      "list_scope": "key prerequisites; dynamic filenames/guarded historical assets are additionally documented and not exhaustively enumerated",
+      "cannot_run_with_public_files_only": true,
+      "reason": "Authentic source/frozen inputs are withheld; no private-literal sidecar is required"
+    },
+    {
+      "script": "pipeline/Schutz_2018_external_Vermeersch_validation/scripts/run_external.py",
+      "stage": "external_validation",
+      "required_paths_relative_to_pipeline": [
+        "Schutz_2018_phase0/analysis_matrix.tsv",
+        "Schutz_2018_phase1/evidence/protocol.json",
+        "Schutz_2018_external_Sato_Vermeersch/structural_audit.json",
+        "Schutz_2018_external_Sato_Vermeersch/vermeersch_pairing_audit.json",
+        "Schutz_2018_external_Sato_Vermeersch/source_hashes.json",
+        "Schutz_2018_external_Sato_Vermeersch/EXTERNAL_SCREEN_REPORT.md"
+      ],
+      "list_scope": "key prerequisites; dynamic filenames/guarded historical assets are additionally documented and not exhaustively enumerated",
+      "cannot_run_with_public_files_only": true,
+      "reason": "Authentic source/frozen inputs are withheld; no private-literal sidecar is required"
+    },
+    {
+      "script": "pipeline/Schutz_2018_figures/Figure1/figure1.R",
+      "stage": "Figure1",
+      "required_paths_relative_to_pipeline": [
+        "Schutz_2018_figures/Figure1/figure1_plot_data",
+        "Schutz_2018_phase0/analysis_matrix.tsv",
+        "Schutz_2018_phase0/data_dictionary.tsv"
+      ],
+      "list_scope": "key prerequisites; dynamic filenames/guarded historical assets are additionally documented and not exhaustively enumerated",
+      "cannot_run_with_public_files_only": true,
+      "reason": "Saved plotting tables/QC/caches and protected historical graphics are withheld; package/fonts/graphics devices also required"
+    },
+    {
+      "script": "pipeline/Schutz_2018_figures/Figure1/figure1_v2.R",
+      "stage": "Figure1",
+      "required_paths_relative_to_pipeline": [
+        "Schutz_2018_figures/Figure1/figure1_plot_data",
+        "Schutz_2018_phase0/analysis_matrix.tsv",
+        "Schutz_2018_phase0/data_dictionary.tsv"
+      ],
+      "list_scope": "key prerequisites; dynamic filenames/guarded historical assets are additionally documented and not exhaustively enumerated",
+      "cannot_run_with_public_files_only": true,
+      "reason": "Saved plotting tables/QC/caches and protected historical graphics are withheld; package/fonts/graphics devices also required"
+    },
+    {
+      "script": "pipeline/Schutz_2018_figures/Figure2/figure2_final.R",
+      "stage": "Figure2",
+      "required_paths_relative_to_pipeline": [
+        "Schutz_2018_figures/Figure2/figure2_plot_data",
+        "Schutz_2018_phase0/analysis_matrix.tsv",
+        "Schutz_2018_phase0/data_dictionary.tsv"
+      ],
+      "list_scope": "key prerequisites; dynamic filenames/guarded historical assets are additionally documented and not exhaustively enumerated",
+      "cannot_run_with_public_files_only": true,
+      "reason": "Saved plotting tables/QC/caches and protected historical graphics are withheld; package/fonts/graphics devices also required"
+    },
+    {
+      "script": "pipeline/Schutz_2018_figures/Figure3/figure3_v4.R",
+      "stage": "Figure3",
+      "required_paths_relative_to_pipeline": [
+        "Schutz_2018_figures/Figure3/figure3_plot_data",
+        "Schutz_2018_phase1/phase1_predictions.tsv",
+        "Schutz_2018_phase1/phase1_metrics.tsv",
+        "Schutz_2018_phase1/phase1_bootstrap.tsv",
+        "Schutz_2018_phase1/run/bootstrap_draws.npz"
+      ],
+      "list_scope": "key prerequisites; dynamic filenames/guarded historical assets are additionally documented and not exhaustively enumerated",
+      "cannot_run_with_public_files_only": true,
+      "reason": "Saved plotting tables/QC/caches and protected historical graphics are withheld; package/fonts/graphics devices also required"
+    },
+    {
+      "script": "pipeline/Schutz_2018_figures/Figure3/figure3_final.R",
+      "stage": "Figure3",
+      "required_paths_relative_to_pipeline": [
+        "Schutz_2018_figures/Figure3/figure3_plot_data",
+        "Schutz_2018_phase1/phase1_predictions.tsv",
+        "Schutz_2018_phase1/phase1_metrics.tsv",
+        "Schutz_2018_phase1/phase1_bootstrap.tsv",
+        "Schutz_2018_phase1/run/bootstrap_draws.npz"
+      ],
+      "list_scope": "key prerequisites; dynamic filenames/guarded historical assets are additionally documented and not exhaustively enumerated",
+      "cannot_run_with_public_files_only": true,
+      "reason": "Saved plotting tables/QC/caches and protected historical graphics are withheld; package/fonts/graphics devices also required"
+    },
+    {
+      "script": "pipeline/Schutz_2018_figures/Figure4/figure4_v3.R",
+      "stage": "Figure4",
+      "required_paths_relative_to_pipeline": [
+        "Schutz_2018_figures/Figure4/figure4_plot_data",
+        "Schutz_2018_phase0/analysis_matrix.tsv",
+        "Schutz_2018_phase0/data_dictionary.tsv",
+        "Schutz_2018_phase1/phase1_predictions.tsv",
+        "Schutz_2018_phase1/phase1_metrics.tsv",
+        "Schutz_2018_phase1/phase1_bootstrap.tsv",
+        "Schutz_2018_phase1/run/bootstrap_draws.npz"
+      ],
+      "list_scope": "key prerequisites; dynamic filenames/guarded historical assets are additionally documented and not exhaustively enumerated",
+      "cannot_run_with_public_files_only": true,
+      "reason": "Saved plotting tables/QC/caches and protected historical graphics are withheld; package/fonts/graphics devices also required"
+    },
+    {
+      "script": "pipeline/Schutz_2018_figures/Figure4/figure4_final.R",
+      "stage": "Figure4",
+      "required_paths_relative_to_pipeline": [
+        "Schutz_2018_figures/Figure4/figure4_plot_data",
+        "Schutz_2018_phase0/analysis_matrix.tsv",
+        "Schutz_2018_phase0/data_dictionary.tsv",
+        "Schutz_2018_phase1/phase1_predictions.tsv",
+        "Schutz_2018_phase1/phase1_metrics.tsv",
+        "Schutz_2018_phase1/phase1_bootstrap.tsv",
+        "Schutz_2018_phase1/run/bootstrap_draws.npz"
+      ],
+      "list_scope": "key prerequisites; dynamic filenames/guarded historical assets are additionally documented and not exhaustively enumerated",
+      "cannot_run_with_public_files_only": true,
+      "reason": "Saved plotting tables/QC/caches and protected historical graphics are withheld; package/fonts/graphics devices also required"
+    },
+    {
+      "script": "pipeline/Schutz_2018_figures/Figure5/figure5.R",
+      "stage": "Figure5",
+      "required_paths_relative_to_pipeline": [
+        "Schutz_2018_figures/Figure5/figure5_plot_data",
+        "Schutz_2018_phase0/analysis_matrix.tsv",
+        "Schutz_2018_phase0/data_dictionary.tsv"
+      ],
+      "list_scope": "key prerequisites; dynamic filenames/guarded historical assets are additionally documented and not exhaustively enumerated",
+      "cannot_run_with_public_files_only": true,
+      "reason": "Saved plotting tables/QC/caches and protected historical graphics are withheld; package/fonts/graphics devices also required"
+    },
+    {
+      "script": "pipeline/Schutz_2018_figures/Figure5/refine_weighted_voronoi.R",
+      "stage": "Figure5",
+      "required_paths_relative_to_pipeline": [
+        "Schutz_2018_figures/Figure5/figure5_plot_data",
+        "Schutz_2018_phase0/analysis_matrix.tsv",
+        "Schutz_2018_phase0/data_dictionary.tsv"
+      ],
+      "list_scope": "key prerequisites; dynamic filenames/guarded historical assets are additionally documented and not exhaustively enumerated",
+      "cannot_run_with_public_files_only": true,
+      "reason": "Saved plotting tables/QC/caches and protected historical graphics are withheld; package/fonts/graphics devices also required"
+    },
+    {
+      "script": "pipeline/Schutz_2018_figures/Figure6/figure6_draft.R",
+      "stage": "Figure6",
+      "required_paths_relative_to_pipeline": [
+        "Schutz_2018_figures/Figure6/figure6_plot_data",
+        "Schutz_2018_phase1/phase1_predictions.tsv",
+        "Schutz_2018_phase1/phase1_metrics.tsv",
+        "Schutz_2018_phase1/phase1_bootstrap.tsv",
+        "Schutz_2018_phase1/run/bootstrap_draws.npz"
+      ],
+      "list_scope": "key prerequisites; dynamic filenames/guarded historical assets are additionally documented and not exhaustively enumerated",
+      "cannot_run_with_public_files_only": true,
+      "reason": "Saved plotting tables/QC/caches and protected historical graphics are withheld; package/fonts/graphics devices also required"
+    },
+    {
+      "script": "pipeline/Schutz_2018_figures/Figure6/figure6_v2.R",
+      "stage": "Figure6",
+      "required_paths_relative_to_pipeline": [
+        "Schutz_2018_figures/Figure6/figure6_plot_data",
+        "Schutz_2018_phase1/phase1_predictions.tsv",
+        "Schutz_2018_phase1/phase1_metrics.tsv",
+        "Schutz_2018_phase1/phase1_bootstrap.tsv",
+        "Schutz_2018_phase1/run/bootstrap_draws.npz"
+      ],
+      "list_scope": "key prerequisites; dynamic filenames/guarded historical assets are additionally documented and not exhaustively enumerated",
+      "cannot_run_with_public_files_only": true,
+      "reason": "Saved plotting tables/QC/caches and protected historical graphics are withheld; package/fonts/graphics devices also required"
+    },
+    {
+      "script": "pipeline/Schutz_2018_figures/Figure6/figure6_v3.R",
+      "stage": "Figure6",
+      "required_paths_relative_to_pipeline": [
+        "Schutz_2018_figures/Figure6/figure6_plot_data",
+        "Schutz_2018_phase1/phase1_predictions.tsv",
+        "Schutz_2018_phase1/phase1_metrics.tsv",
+        "Schutz_2018_phase1/phase1_bootstrap.tsv",
+        "Schutz_2018_phase1/run/bootstrap_draws.npz"
+      ],
+      "list_scope": "key prerequisites; dynamic filenames/guarded historical assets are additionally documented and not exhaustively enumerated",
+      "cannot_run_with_public_files_only": true,
+      "reason": "Saved plotting tables/QC/caches and protected historical graphics are withheld; package/fonts/graphics devices also required"
+    },
+    {
+      "script": "pipeline/Schutz_2018_figures/Figure6/figure6_final.R",
+      "stage": "Figure6",
+      "required_paths_relative_to_pipeline": [
+        "Schutz_2018_figures/Figure6/figure6_plot_data",
+        "Schutz_2018_phase1/phase1_predictions.tsv",
+        "Schutz_2018_phase1/phase1_metrics.tsv",
+        "Schutz_2018_phase1/phase1_bootstrap.tsv",
+        "Schutz_2018_phase1/run/bootstrap_draws.npz"
+      ],
+      "list_scope": "key prerequisites; dynamic filenames/guarded historical assets are additionally documented and not exhaustively enumerated",
+      "cannot_run_with_public_files_only": true,
+      "reason": "Saved plotting tables/QC/caches and protected historical graphics are withheld; package/fonts/graphics devices also required"
+    },
+    {
+      "script": "pipeline/Schutz_2018_phase_minus2/scripts/explore.py",
+      "stage": "phase_minus2",
+      "required_paths_relative_to_pipeline": [
+        "Schutz_2018_phase_minus2/evidence/Supplementary_Data_Sheet_S2.xlsx"
+      ],
+      "list_scope": "Actual workbook input; original script uses workbook.active; verify active worksheet identity before any authorised run",
+      "cannot_run_with_public_files_only": true,
+      "reason": "Source workbook not distributed; executing this historical script writes private explore.json containing raw rows"
+    }
+  ],
+  "table_schemas": {
+    "Schutz_2018_phase0/analysis_matrix.tsv": {
+      "format": "UTF-8 TSV",
+      "columns": [
+        "observation_id",
+        "study_id",
+        "pair_id",
+        "logRR",
+        "crop",
+        "climate_zone",
+        "soil_texture",
+        "soil_organic_matter_pct",
+        "soil_ph_water",
+        "available_p_kg_ha",
+        "inoculant_function",
+        "n_applied_kg_ha",
+        "k_applied_kg_ha",
+        "p_applied_kg_ha",
+        "irrigation_status",
+        "fertilization_type",
+        "treatment_dry_yield_kg_ha",
+        "control_dry_yield_kg_ha",
+        "treatment_excel_row",
+        "control_excel_row"
+      ],
+      "numeric_missing": "NA",
+      "ids": "opaque strings; original grouping/provenance only",
+      "outcome": "logRR; never a predictor"
+    },
+    "Schutz_2018_phase0/split_manifest.tsv": {
+      "format": "UTF-8 TSV",
+      "columns": [
+        "fold_id",
+        "design",
+        "fold_number",
+        "primary_or_secondary",
+        "held_out_level",
+        "held_out_function_code",
+        "train_n",
+        "test_n",
+        "purge_n",
+        "train_studies_n",
+        "test_studies_n",
+        "purge_studies_n",
+        "study_overlap_train_test",
+        "study_overlap_train_purge",
+        "train_study_ids",
+        "test_study_ids",
+        "purge_study_ids",
+        "train_ids",
+        "test_ids",
+        "purge_ids",
+        "train_ids_sha256",
+        "test_ids_sha256",
+        "purge_ids_sha256"
+      ],
+      "membership": "comma-separated exact original observation IDs; NA for empty membership"
+    },
+    "Schutz_2018_phase0/data_dictionary.tsv": {
+      "format": "UTF-8 TSV",
+      "columns": [
+        "column_index",
+        "column",
+        "role",
+        "dtype",
+        "unit_or_code",
+        "source_field",
+        "missing_allowed",
+        "missing_token",
+        "missing_n",
+        "definition",
+        "future_handling"
+      ]
+    }
+  }
+}

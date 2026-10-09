@@ -1,0 +1,85 @@
+Package	Version	License	Depends	Imports	LinkingTo	SystemRequirements	Author	URL
+BH	1.90.0-1	BSL-1.0	NA	NA	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+ComplexUpset	1.3.3	MIT + file LICENSE	NOT_RECORDED	ggplot2, patchwork, scales, colorspace	NOT_RECORDED	NOT_RECORDED	Michał Krassowski [aut, cre] (<https://orcid.org/0000-0002-9638-7785>)	https://github.com/krassowski/complex-upset, https://krassowski.github.io/complex-upset/
+DBI	1.3.0	LGPL (>= 2.1)	methods, R (>= 3.0.0)	NA	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+GlobalOptions	0.1.4	MIT + file LICENSE	R (>= 3.3.0), methods	utils	NOT_RECORDED	NOT_RECORDED	Zuguang Gu [aut, cre] (ORCID: <https://orcid.org/0000-0002-7395-8709>)	https://github.com/jokergoo/GlobalOptions
+KernSmooth	2.23-26	Unlimited	R (>= 2.5.0), stats	NA	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+MASS	7.3-65	GPL-2 | GPL-3	R (>= 4.4.0), grDevices, graphics, stats, utils	methods	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+Matrix	1.7-5	GPL (>= 2) | file LICENCE	R (>= 4.4), methods	grDevices, graphics, grid, lattice, stats, utils	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+R6	2.6.1	MIT + file LICENSE	R (>= 3.6)	NA	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+RColorBrewer	1.1-3	Apache License 2.0	R (>= 2.0.0)	NA	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+Rcpp	1.1.2	GPL (>= 2)	R (>= 3.5.0)	methods, utils	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+RcppArmadillo	15.4.2-1	GPL (>= 2)	R (>= 3.3.0)	Rcpp (>= 1.1.1), stats, utils, methods	Rcpp	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+S7	0.2.2	MIT + file LICENSE	R (>= 3.5.0)	utils	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+WeightedTreemaps	0.1.4	GPL-3	R (>= 3.5.0)	colorspace, dplyr, grid, lattice, methods, Rcpp, scales, sf, sp, tibble	BH, Rcpp, RcppCGAL	C++17	Michael Jahn [aut, cre] (<https://orcid.org/0000-0002-3913-153X>), David Leslie [aut], Ahmadou Dicko [aut] (<https://orcid.org/0000-0002-9654-7582>), Dunipace Eric [aut] (<https://orcid.org/0000-0001-8909-213X>), Paul Murrell [aut, cph] (<https://orcid.org/0000-0002-3224-8858>)	https://github.com/m-jahn/WeightedTreemaps
+base64enc	0.1-6	GPL-2 | GPL-3	R (>= 2.9.0)	NA	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+cachem	1.1.0	MIT + file LICENSE	NA	rlang, fastmap (>= 1.2.0)	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+circlize	0.4.18	MIT + file LICENSE	R (>= 4.0.0), graphics	GlobalOptions (>= 0.1.2), shape, grDevices, utils, stats, colorspace, methods, grid	NOT_RECORDED	NOT_RECORDED	Zuguang Gu [aut, cre] (ORCID: <https://orcid.org/0000-0002-7395-8709>)	https://github.com/jokergoo/circlize, https://jokergoo.github.io/circlize_book/book/
+class	7.3-23	GPL-2 | GPL-3	R (>= 3.0.0), stats, utils	MASS	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+classInt	0.4-11	GPL (>= 2)	R (>= 2.2)	grDevices, stats, graphics, e1071, class, KernSmooth	NOT_RECORDED	NOT_RECORDED	Roger Bivand [aut, cre] (<https://orcid.org/0000-0003-2392-6140>), Bill Denney [ctb] (<https://orcid.org/0000-0002-5759-428X>), Richard Dunlap [ctb], Diego Hernangómez [ctb] (<https://orcid.org/0000-0001-8457-4658>), Hisaji Ono [ctb], Josiah Parry [ctb] (<https://orcid.org/0000-0001-9910-865X>), Matthieu Stigler [ctb] (<https://orcid.org/0000-0002-6802-4290>)	https://r-spatial.github.io/classInt/, https://github.com/r-spatial/classInt/
+cli	3.6.6	MIT + file LICENSE	R (>= 3.4)	utils	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+colorspace	2.1-3	BSD_3_clause + file LICENSE	R (>= 3.0.0), methods	graphics, grDevices, stats	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+cpp11	0.5.5	MIT + file LICENSE	R (>= 4.0.0)	NA	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+digest	0.6.39	GPL (>= 2)	R (>= 3.3.0)	utils	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+dplyr	1.2.1	MIT + file LICENSE	R (>= 4.1.0)	cli (>= 3.6.2), generics, glue (>= 1.3.2), lifecycle (>= 1.0.5), magrittr (>= 1.5), methods, pillar (>= 1.9.0), R6, rlang (>= 1.1.7), tibble (>= 3.2.0), tidyselect (>= 1.2.0), utils, vctrs (>= 0.7.1)	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+e1071	1.7-17	GPL-2 | GPL-3	NOT_RECORDED	graphics, grDevices, class, stats, methods, utils, proxy	NOT_RECORDED	NOT_RECORDED	David Meyer [aut, cre] (ORCID: <https://orcid.org/0000-0002-5196-3048>), Evgenia Dimitriadou [aut, cph], Kurt Hornik [aut] (ORCID: <https://orcid.org/0000-0003-4198-9911>), Andreas Weingessel [aut], Friedrich Leisch [aut], Chih-Chung Chang [ctb, cph] (libsvm C++-code), Chih-Chen Lin [ctb, cph] (libsvm C++-code)	NOT_RECORDED
+farver	2.1.2	MIT + file LICENSE	NA	NA	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+fastmap	1.2.0	MIT + file LICENSE	NA	NA	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+generics	0.1.4	MIT + file LICENSE	R (>= 3.6)	methods	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+ggalluvial	0.12.6	GPL-3	R (>= 3.6), ggplot2 (>= 2.2)	stats, dplyr (>= 0.7), tidyr (>= 0.7), lazyeval, rlang, tidyselect	NOT_RECORDED	NOT_RECORDED	Jason Cory Brunson [aut, cre], Quentin D. Read [aut]	http://corybrunson.github.io/ggalluvial/
+ggforce	0.5.0	MIT + file LICENSE	ggplot2 (>= 3.5.0), R (>= 3.3.0)	grid, scales, MASS, tweenr (>= 0.1.5), gtable, rlang, polyclip, stats, grDevices, tidyselect, withr, utils, lifecycle, cli, vctrs, systemfonts	cpp11	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+ggplot2	4.0.3	MIT + file LICENSE	R (>= 4.1)	cli, grDevices, grid, gtable (>= 0.3.6), isoband, lifecycle (> 1.0.1), rlang (>= 1.1.0), S7, scales (>= 1.4.0), stats, vctrs (>= 0.6.0), withr (>= 2.5.0)	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+ggraph	2.2.2	MIT + file LICENSE	R (>= 2.10), ggplot2 (>= 3.5.0)	dplyr, ggforce (>= 0.3.1), grid, igraph (>= 1.0.0), scales, MASS, ggrepel, utils, stats, viridis, rlang, tidygraph, graphlayouts (>= 1.1.0), withr, cli, vctrs, lifecycle, memoise	cpp11	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+ggrepel	0.9.8	GPL-3 | file LICENSE	R (>= 4.1.0), ggplot2 (>= 3.5.2)	grid, Rcpp, rlang (>= 1.1.6), S7, scales (>= 1.4.0), withr (>= 3.0.2)	Rcpp	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+glue	1.8.1	MIT + file LICENSE	R (>= 4.1)	methods	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+grDevices	4.6.1	Part of R 4.6.1	NA	NA	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+graphics	4.6.1	Part of R 4.6.1	NA	grDevices	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+graphlayouts	1.2.5	MIT + file LICENSE	R (>= 3.6.0)	igraph (>= 2.0.0), Rcpp	Rcpp, RcppArmadillo	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+grid	4.6.1	Part of R 4.6.1	NA	grDevices, utils	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+gridExtra	2.3.1	GPL (>= 2)	NA	gtable, grid, grDevices, graphics, utils	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+gridGraphics	0.5-1	GPL (>= 2)	grid, graphics	grDevices	NOT_RECORDED	NOT_RECORDED	Paul Murrell [cre, aut], Zhijian Wen [aut]	https://github.com/pmur002/gridgraphics
+gtable	0.3.6	MIT + file LICENSE	R (>= 4.0)	cli, glue, grid, lifecycle, rlang (>= 1.1.0), stats	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+igraph	2.3.3	GPL (>= 2)	methods, R (>= 3.5.0)	cli, graphics, grDevices, lifecycle, magrittr, Matrix, pkgconfig (>= 2.0.0), rlang (>= 1.1.0), stats, utils, vctrs	cpp11 (>= 0.5.0)	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+isoband	0.3.0	MIT + file LICENSE	NA	cli, grid, rlang, utils	cpp11	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+jsonlite	2.0.0	MIT + file LICENSE	methods	NA	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+labeling	0.4.3	MIT + file LICENSE | Unlimited	NA	stats, graphics	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+lattice	0.22-9	GPL (>= 2)	R (>= 4.0.0)	grid, grDevices, graphics, stats, utils	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+lazyeval	0.2.3	GPL-3	R (>= 3.1.0)	rlang	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+lifecycle	1.0.5	MIT + file LICENSE	R (>= 3.6)	cli (>= 3.4.0), rlang (>= 1.1.0)	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+magrittr	2.0.5	MIT + file LICENSE	R (>= 3.4.0)	NA	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+maps	3.4.3	GPL-2	R (>= 3.5.0)	graphics, utils	NOT_RECORDED	NOT_RECORDED	Richard A. Becker [aut] (Original S code), Allan R. Wilks [aut] (Original S code), Ray Brownrigg [trl, aut] (R version), Thomas P. Minka [aut] (Enhancements), Alex Deckmyn [aut, cre] (ORCID: <https://orcid.org/0009-0002-2010-8310>)	https://github.com/adeckmyn/maps
+memoise	2.0.1	MIT + file LICENSE	NA	rlang (>= 0.4.10), cachem	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+methods	4.6.1	Part of R 4.6.1	NA	utils, stats	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+patchwork	1.3.2	MIT + file LICENSE	NA	ggplot2 (>= 3.0.0), gtable (>= 0.3.6), grid, stats, grDevices, utils, graphics, rlang (>= 1.0.0), cli, farver	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+pillar	1.11.1	MIT + file LICENSE	NA	cli (>= 2.3.0), glue, lifecycle, rlang (>= 1.0.2), utf8 (>= 1.1.0), utils, vctrs (>= 0.5.0)	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+pkgconfig	2.0.3	MIT + file LICENSE	NA	utils	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+png	0.1-9	GPL-2 | GPL-3	R (>= 2.9.0)	NA	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+polyclip	1.10-7	BSL	R (>= 3.5.0)	NA	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+proxy	0.4-29	GPL-2 | GPL-3	R (>= 3.4.0)	stats, utils	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+purrr	1.2.2	MIT + file LICENSE	R (>= 4.1)	cli (>= 3.6.1), lifecycle (>= 1.0.3), magrittr (>= 1.5.0), rlang (>= 1.1.1), vctrs (>= 0.6.3)	cli	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+ragg	1.5.2	MIT + file LICENSE	NA	systemfonts (>= 1.0.3), textshaping (>= 0.3.0)	systemfonts, textshaping	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+rlang	1.3.0	MIT + file LICENSE	R (>= 4.0.0)	utils	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+s2	1.1.13	Apache License (== 2.0)	R (>= 3.0.0)	Rcpp, wk (>= 0.6.0)	Rcpp, wk	cmake, OpenSSL >= 1.0.1, Abseil >= 20230802.0	Dewey Dunnington [aut] (ORCID: <https://orcid.org/0000-0002-9415-4582>), Edzer Pebesma [aut, cre] (ORCID: <https://orcid.org/0000-0001-8049-7069>), Ege Rubak [aut], Jeroen Ooms [ctb] (configure script), Google, Inc. [cph] (Original s2geometry.io source code)	https://r-spatial.github.io/s2/, https://github.com/r-spatial/s2, https://s2geometry.io/
+scales	1.4.0	MIT + file LICENSE	R (>= 4.1)	cli, farver (>= 2.0.3), glue, labeling, lifecycle, R6, RColorBrewer, rlang (>= 1.1.0), viridisLite	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+sf	1.1-3	GPL-2 | MIT + file LICENSE	methods, R (>= 4.1.0)	classInt (>= 0.4-1), DBI (>= 0.8), graphics, grDevices, grid, s2 (>= 1.1.0), stats, tools, units (>= 0.7-0), utils	Rcpp	GDAL (>= 2.0.1), GEOS (>= 3.4.0), PROJ (>= 4.8.0), sqlite3	Edzer Pebesma [aut, cre] (ORCID: <https://orcid.org/0000-0001-8049-7069>), Roger Bivand [ctb] (ORCID: <https://orcid.org/0000-0003-2392-6140>), Etienne Racine [ctb], Michael Sumner [ctb], Ian Cook [ctb], Tim Keitt [ctb], Robin Lovelace [ctb], Hadley Wickham [ctb], Jeroen Ooms [ctb] (ORCID: <https://orcid.org/0000-0002-4035-0289>), Kirill Müller [ctb], Thomas Lin Pedersen [ctb], Dan Baston [ctb], Dewey Dunnington [ctb] (ORCID: <https://orcid.org/0000-0002-9415-4582>), Alexandre Courtiol [ctb] (ORCID: <https://orcid.org/0000-0003-0637-2959>)	https://r-spatial.github.io/sf/, https://github.com/r-spatial/sf
+shape	1.4.6.1	GPL (>= 3)	R (>= 2.01)	stats, graphics, grDevices	NOT_RECORDED	NOT_RECORDED	Karline Soetaert <karline.soetaert@nioz.nl>	NOT_RECORDED
+sp	2.2-3	GPL (>= 2)	R (>= 3.5.0), methods	utils, stats, graphics, grDevices, lattice, grid	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+stats	4.6.1	Part of R 4.6.1	NA	utils, grDevices, graphics	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+stringi	1.8.9	file LICENSE	R (>= 3.4)	tools, utils, stats	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+stringr	1.6.0	MIT + file LICENSE	R (>= 4.1.0)	cli, glue (>= 1.6.1), lifecycle (>= 1.0.3), magrittr, rlang (>= 1.0.0), stringi (>= 1.5.3), vctrs (>= 0.4.0)	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+systemfonts	1.3.2	MIT + file LICENSE	R (>= 3.2.0)	base64enc, grid, jsonlite, lifecycle, tools, utils	cpp11 (>= 0.2.1)	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+textshaping	1.0.5	MIT + file LICENSE	R (>= 3.2.0)	lifecycle, stats, stringi, systemfonts (>= 1.3.0), utils	cpp11 (>= 0.2.1), systemfonts (>= 1.0.0)	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+tibble	3.3.1	MIT + file LICENSE	R (>= 3.4.0)	cli, lifecycle (>= 1.0.0), magrittr, methods, pillar (>= 1.8.1), pkgconfig, rlang (>= 1.0.2), utils, vctrs (>= 0.5.0)	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+tidygraph	1.3.1	MIT + file LICENSE	NA	cli, dplyr (>= 0.8.5), igraph (>= 2.0.0), lifecycle, magrittr, pillar, R6, rlang, stats, tibble, tidyr, tools, utils	cpp11	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+tidyr	1.3.2	MIT + file LICENSE	R (>= 4.1.0)	cli (>= 3.4.1), dplyr (>= 1.1.0), glue, lifecycle (>= 1.0.3), magrittr, purrr (>= 1.0.1), rlang (>= 1.1.1), stringr (>= 1.5.0), tibble (>= 2.1.1), tidyselect (>= 1.2.1), utils, vctrs (>= 0.5.2)	cpp11 (>= 0.4.0)	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+tidyselect	1.2.1	MIT + file LICENSE	R (>= 3.4)	cli (>= 3.3.0), glue (>= 1.3.0), lifecycle (>= 1.0.3), rlang (>= 1.0.4), vctrs (>= 0.5.2), withr	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+tools	4.6.1	Part of R 4.6.1	NA	NA	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+tweenr	2.0.3	MIT + file LICENSE	R (>= 3.2.0)	farver, magrittr, rlang, vctrs	cpp11 (>= 0.4.2)	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+units	1.0-1	GPL-2	R (>= 3.5.0)	Rcpp	Rcpp (>= 1.1.0)	udunits-2	Edzer Pebesma [aut, cre] (ORCID: <https://orcid.org/0000-0001-8049-7069>), Thomas Mailund [aut], Tomasz Kalinowski [aut], James Hiebert [ctb], Iñaki Ucar [aut] (ORCID: <https://orcid.org/0000-0001-6403-5550>), Thomas Lin Pedersen [ctb]	https://r-quantities.github.io/units/, https://github.com/r-quantities/units
+utf8	1.2.6	Apache License (== 2.0) | file LICENSE	R (>= 2.10)	NA	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+utils	4.6.1	Part of R 4.6.1	NA	NA	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+vctrs	0.7.3	MIT + file LICENSE	R (>= 4.0.0)	cli (>= 3.4.0), glue, lifecycle (>= 1.0.3), rlang (>= 1.1.7)	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+viridis	0.6.5	MIT + file LICENSE	R (>= 2.10), viridisLite (>= 0.4.0)	ggplot2 (>= 1.0.1), gridExtra	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+viridisLite	0.4.3	MIT + file LICENSE	R (>= 2.10)	NA	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+withr	3.0.3	MIT + file LICENSE	R (>= 3.6.0)	graphics, grDevices	NA	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED
+wk	0.9.5	MIT + file LICENSE	R (>= 2.10)	NOT_RECORDED	NOT_RECORDED	NOT_RECORDED	Dewey Dunnington [aut, cre] (ORCID: <https://orcid.org/0000-0002-9415-4582>), Edzer Pebesma [aut] (ORCID: <https://orcid.org/0000-0001-8049-7069>), Anthony North [ctb]	https://paleolimbot.github.io/wk/, https://github.com/paleolimbot/wk

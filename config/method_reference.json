@@ -1,0 +1,115 @@
+{
+  "predictors": [
+    "crop",
+    "climate_zone",
+    "soil_texture",
+    "soil_organic_matter_pct",
+    "soil_ph_water",
+    "available_p_kg_ha",
+    "inoculant_function",
+    "n_applied_kg_ha",
+    "k_applied_kg_ha",
+    "p_applied_kg_ha",
+    "irrigation_status",
+    "fertilization_type"
+  ],
+  "categorical_predictors": [
+    "crop",
+    "climate_zone",
+    "soil_texture",
+    "inoculant_function",
+    "irrigation_status",
+    "fertilization_type"
+  ],
+  "numeric_predictors": [
+    "soil_organic_matter_pct",
+    "soil_ph_water",
+    "available_p_kg_ha",
+    "n_applied_kg_ha",
+    "k_applied_kg_ha",
+    "p_applied_kg_ha"
+  ],
+  "target": "logRR",
+  "designs": {
+    "A": "LOSO",
+    "B": "LOCO_whole_study_purge",
+    "C": "function_secondary_whole_study_purge"
+  },
+  "models": {
+    "Ridge": {
+      "alpha": 10.0,
+      "solver": "cholesky",
+      "fit_intercept": true
+    },
+    "RandomForest": {
+      "n_estimators": 300,
+      "max_depth": 6,
+      "min_samples_leaf": 8,
+      "max_features": 1.0,
+      "bootstrap": true,
+      "oob_score": false,
+      "n_jobs": 1
+    },
+    "XGBoost": {
+      "n_estimators": 400,
+      "max_depth": 3,
+      "learning_rate": 0.03,
+      "min_child_weight": 5.0,
+      "reg_lambda": 10.0,
+      "reg_alpha": 0.0,
+      "subsample": 1.0,
+      "colsample_bytree": 1.0,
+      "tree_method": "hist",
+      "objective": "reg:squarederror",
+      "n_jobs": 1,
+      "verbosity": 0
+    }
+  },
+  "base_seed": 20261006,
+  "model_seed_policy": "base_seed+zero_based_frozen_split_manifest_index",
+  "hyperparameter_search": false,
+  "feature_selection": false,
+  "SHAP": false,
+  "training_weights": "N_train/(S_train*n_rows_in_training_study); mean row weight1; each study equal total weight",
+  "preprocessing": "training-only numeric median; six fixed numeric missing indicators; Ridge-only training sample-weighted numeric StandardScaler; train-only categorical vocabulary with fixed MISSING token; OHE handle_unknown=ignore plus six fixed unknown indicators; all derive only from12 source predictors",
+  "baselines": [
+    "zero_response",
+    "training_observation_mean",
+    "training_study_equal_mean"
+  ],
+  "metrics": [
+    "MAE",
+    "RMSE",
+    "R2"
+  ],
+  "metric_weights": [
+    "observation",
+    "study_equal"
+  ],
+  "decision_rule": {
+    "primary_loss": "study_equal RMSE; negative model-minus-baseline delta means improvement",
+    "multiplicity": "one-sided upper percentile bound at 1-0.05/12 for3models*2primarydesigns*2mean_baselines; secondary function not in conclusion gate",
+    "model_design_supported": "upper adjusted paired deltaRMSE<0 vs both training mean baselines; point study_equal R2>0; point study_equal MAE and observation MAE/RMSE no worse than both mean baselines; point RMSE under both weights no worse than zero-response baseline",
+    "GENERALIZABLE_SIGNAL": "A and B each have at least one supported prespecified model; can be different models, no deployable winner selected",
+    "STUDY_GENERALIZES_CROP_TRANSFER_WEAK": "A has a supported model, B does not",
+    "LIMITED_GENERALIZABLE_SIGNAL": "A does not have a supported model; any B-only support reported descriptively",
+    "interpretation": "conservative prespecified conditional uncertainty classification, not formal causal inference or proof that any possible algorithm cannot generalize"
+  },
+  "libraries": {
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "scipy": "1.16.3",
+    "scikit-learn": "1.7.2",
+    "xgboost": "3.0.5",
+    "joblib": "1.5.2",
+    "threadpoolctl": "3.6.0"
+  },
+  "bootstrap": {
+    "resamples": 2000,
+    "seed": 20261006,
+    "unit": "original study_id",
+    "paired_draws_shared_across_models_baselines_designs": true,
+    "CI": "95% percentile; no refitting; conditional on fixed out-of-fold predictions"
+  },
+  "_scope": "Method-only extraction from the archived Phase1 protocol; not the byte-identical frozen protocol and not sufficient to start analyses. Cohort counts, data fingerprints, frozen memberships and results withheld."
+}

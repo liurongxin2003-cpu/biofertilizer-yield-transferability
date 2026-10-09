@@ -1,0 +1,37 @@
+# Code-only: authentic inputs, outputs, private workspaces and installed software stay private.
+__pycache__/
+*.py[cod]
+.Rhistory
+.RData
+.Rproj.user/
+*.pdf
+*.png
+*.svg
+*.tif
+*.tiff
+*.jpg
+*.jpeg
+*.npz
+*.npy
+*.rds
+*.RDS
+*.rda
+*.xlsx
+*.xls
+*.docx
+*.parquet
+*.pkl
+*.joblib
+*.zip
+*.bundle
+private/
+scratch/
+deps/
+R_lib/
+pipeline/**/evidence/
+pipeline/**/run/
+pipeline/**/*.tsv
+pipeline/**/*.csv
+pipeline/**/*.json
+pipeline/**/figure*_plot_data/
+# Review the allow-list manifest; this ignore file is only a guardrail.
